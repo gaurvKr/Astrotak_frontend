@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Astrotak",
+    "slug": "Astrotak",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Astrotak"
+}
