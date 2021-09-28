@@ -3,7 +3,6 @@ import { ScrollView, Text, View,Image } from "react-native"
 import Images from '../../getImages'
 
 const Card = ({x}) => {
-    console.log(x.date);
     return <View style={{marginRight:10,alignItems:'center'}}>
         <Image source={Images[x.img]}
          style={{height:100,width:100,margin:10}} />

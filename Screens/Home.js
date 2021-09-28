@@ -17,7 +17,7 @@ const Home = ({navigation, route}) => {
     const question = route.params.question
     const logo = 'HomeLogo'
     return(
-        <View style={{backgroundColor:'#fff'}}>
+        <View style={{backgroundColor:'#fff',flex:1}}>
             <SafeAreaView>
                 <ScrollView>
                     <View style={{margin:10, justifyContent:'center',

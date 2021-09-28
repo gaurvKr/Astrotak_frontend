@@ -95,8 +95,7 @@ const Talk = ({navigation, route}) => {
             const regex = new RegExp(search,'gi')
             fillteredAstro = astro.filter(x => {
                 var ans = false
-                ans = ans || x.firstName.match(regex)
-                ans = ans || x.lastName.match(regex) 
+                ans = ans || (`${x.firstName} ${x.lastName}`).match(regex)
                 x.languages.map(x => {
                     ans = ans || x.match(regex)
                 })
@@ -159,7 +158,7 @@ const Talk = ({navigation, route}) => {
     return(
         <>
         <View 
-         style={{display:'flex',flexDirection:'column',
+         style={{display:'flex',flexDirection:'column',flex:1,
          backgroundColor:'#fff',opacity: loading ? 0.4 : 1}}>
         <View style={{padding:10,backgroundColor:'#fff'}}>
             <View style={{flexDirection:'row'}}>
@@ -199,7 +198,6 @@ const Talk = ({navigation, route}) => {
                  placeholder='Search Astrologer' value={search}
                  style={{flex:1,borderWidth:0}}
                 onChangeText = {e => {
-                    setLoading(true)
                     setSearch(e)
                 }} />
                 <Text onPress = {e => {
@@ -214,7 +212,7 @@ const Talk = ({navigation, route}) => {
             : null
         }
             <FlatList
-             style={{marginBottom:showSearchBar ? 100 : 50}}
+             style={{flex:1}}
              onTouchStart = {e => setShowSort(false)}
                 data = {filterItems}
                 keyExtractor = {(item) => item._id}

@@ -21,16 +21,16 @@ export default function App() {
   const [loading1,setLoading1] = useState(true)
 
   const fetch = () => {
-    axios.get('http://192.168.43.12:5000/astrologer').then((res) => {
+    axios.get('https://astrotak.herokuapp.com/astrologer').then((res) => {
       setAstro(res.data)
       setLoading(false)
-      axios.get('http://192.168.43.12:5000/banner').then((res) => {
+      axios.get('https://astrotak.herokuapp.com/banner').then((res) => {
       setBanner(res.data)
-      axios.get('http://192.168.43.12:5000/Horoscope').then((res) => {
+      axios.get('https://astrotak.herokuapp.com/Horoscope').then((res) => {
       setHoro(res.data)
-      axios.get('http://192.168.43.12:5000/question').then((res) => {
+      axios.get('https://astrotak.herokuapp.com/question').then((res) => {
       setQuestion(res.data)
-      axios.get('http://192.168.43.12:5000/report').then((res) => {
+      axios.get('https://astrotak.herokuapp.com/report').then((res) => {
       setReport(res.data)
       setLoading1(false)
     })
